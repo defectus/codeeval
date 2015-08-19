@@ -1,25 +1,49 @@
-var fs = require("fs");
+var fs = require("fs"),
+   morse = {
+      ".-": "A",
+      "-...": "B",
+      "-.-.": "C",
+      "-..": "D",
+      ".": "E",
+      "..-.": "F",
+      "--.": "G",
+      "....": "H",
+      "..": "I",
+      ".---": "J",
+      "-.-": "K",
+      ".-..": "L",
+      "--": "M",
+      "-.": "N",
+      "---": "O",
+      ".--.": "P",
+      "--.-": "Q",
+      ".-.": "R",
+      "...": "S",
+      "-": "T",
+      "..-": "U",
+      "...-": "V",
+      ".--": "W",
+      "-..-": "X",
+      "-.--": "Y",
+      "--..": "Z",
+      "-----": "0",
+      ".----": "1",
+      "..---": "2",
+      "...--": "3",
+      "....-": "4",
+      ".....": "5",
+      "-....": "6",
+      "--...": "7",
+      "---..": "8",
+      "----.": "9"
+   };
 
-fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function (line) {
+fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function(line) {
    if (line !== "") {
-      line = line.split(',').map(parseFloat);
-      var result =Array.apply(0, new Array(line.length)).map(function(_, i) {return i + 1}).map(function(v){
-         return sumRanges(v, line);
-      }).reduce(function (a, c) {
-         var max = c.reduce(function(a, c){return c > a ? c : a}, -1000000000);
-         if (max > a) return max; else return a;
-      }, -100000000);
-      console.log(result);
+      console.log(line.split('  ').reduce(function(a, c) {
+         return a + ' ' + c.split(' ').map(function(v) {
+            return morse[v.trim()];
+         }).join('');
+      }, '').trim());
    }
 });
-
-function sumRanges(len, array) {
-   var result = [];
-   for (var i = 0; i < (array.length - len + 1 ); i++) {
-      result.push(array.slice(i, i + len).reduce(function (a, c) {
-         return a + parseInt(c);
-      }, 0));
-   }
-   return result;
-}
-

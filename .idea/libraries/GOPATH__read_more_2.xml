@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;read-more&gt;">
+    <CLASSES>
+      <root url="file:///usr/local/Cellar/go/1.5.1/src/github.com" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$/longest-line" />
+      <root url="file://$PROJECT_DIR$/fizzbuzz" />
+      <root url="file:///usr/local/Cellar/go/1.5.1/src/github.com/constabulary/gb/vendor/_testdata" />
+      <root url="file://$PROJECT_DIR$/compress-sequence" />
+      <root url="file:///usr/local/Cellar/go/1.5.1/src/github.com/go-sql-driver/mysql/.git" />
+      <root url="file://$PROJECT_DIR$/sort-matrix-columns" />
+      <root url="file:///usr/local/Cellar/go/1.5.1/src/github.com/constabulary/gb/.git" />
+      <root url="file://$PROJECT_DIR$/max-range-sum" />
+      <root url="file://$PROJECT_DIR$/lowest-unique-number" />
+      <root url="file://$PROJECT_DIR$/string-searching" />
+      <root url="file://$PROJECT_DIR$/string-mask" />
+      <root url="file://$PROJECT_DIR$/stepwise-word" />
+      <root url="file://$PROJECT_DIR$/read-more" />
+      <root url="file://$PROJECT_DIR$/clean-up-the-words" />
+      <root url="file://$PROJECT_DIR$/twenty-four-eight" />
+      <root url="file://$PROJECT_DIR$/remove-characters" />
+      <root url="file://$PROJECT_DIR$/text-to-number" />
+      <root url="file://$PROJECT_DIR$/sum-of-integers" />
+      <root url="file:///usr/local/Cellar/go/1.5.1/src/github.com/constabulary/gb/testdata" />
+      <root url="file://$PROJECT_DIR$/strings-and-arrows" />
+    </excluded>
+  </library>
+</component>
